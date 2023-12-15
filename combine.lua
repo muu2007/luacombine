@@ -68,7 +68,7 @@ local function combn_no(n,r)
    return factorial(n)/(factorial(r)*factorial(n-r))
 end
 
-function ipermute(n)
+local function ipermute(n)
    local function gen(p,n)
       if n == 0 then coroutine.yield(p)
       else
